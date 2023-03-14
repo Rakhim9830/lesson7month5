@@ -19,23 +19,21 @@ class Math {
         return result
     }
 
-    fun devide(a:String, b:String): String{
+    fun divide(a: String, b: String): String {
         var result = ""
-        if (a.isInteger() && b.isInteger() && b !="0"){
-            result = (a.toDouble() / b.toDouble()).toString()
+        if (a.isInteger() && b.isInteger() && b != "0"){
+            if (((a.toDouble() / b.toDouble()) % 1).toString() == "0.0"||((a.toDouble() / b.toDouble()) % 1).toString() == "-0.0" ){
+                result = (a.toInt() / b.toInt()).toString()
+            }else{
+                result = (a.toDouble() / b.toDouble()).toString()}
+        } else if (a.contains(".") || b.contains(".")) {
+            result = "без дробей"
+        } else if (b == "0"){
+            result = "на ноль не делить"
+        } else {
+            result = "пишите только числа"
         }
-        else if (result.contains(".")){
-            result = (a.toDouble() + b.toDouble()).toString()
-        }
-        else if (a.contains(".")|| b.contains(".")){
-            result = (a.toDouble() + b.toDouble()).toString()
-        }
-        else if (b =="0"){
-            result = "на ноль делить нельзя"
-        }
-        else{
-            result = "вы обязаны ввести числа"
-        }
+
         return result
     }
 

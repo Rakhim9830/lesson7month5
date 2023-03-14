@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 result.text = Math().add(edFm.text.toString(), scFm.text.toString())
             }
             btnDevide.setOnClickListener {
-                result.text = Math().devide(edFm.text.toString(),scFm.text.toString())
+                result.text = Math().divide(edFm.text.toString(),scFm.text.toString())
             }
         }
     }

@@ -20,7 +20,7 @@ class MathTest {
 }
     @Test
     fun simplePlusTest(){
-        assertEquals("4",math?.add("","2"))
+        assertEquals("вы обязаны ввести числа",math?.add("","2"))
     }
     @Test
     fun simpleEmptyTest(){
@@ -44,15 +44,19 @@ class MathTest {
 
     @Test
     fun simpleDevide(){
-        assertEquals("4",math?.devide("8","2"))
+        assertEquals("4",math?.divide("8","2"))
     }
     @Test
     fun simpleZeroDevide(){
-        assertEquals("на ноль делить нельзя",math?.devide("8","0"))
+        assertEquals("на ноль делить нельзя",math?.divide("8","0"))
     }
     @Test
     fun simpleDotDevide(){
-        assertEquals("1.1",math?.devide("1","0.1"))
+        assertEquals("1.1",math?.divide("1","0.1"))
+    }
+    @Test
+    fun simpleTestDevide(){
+        assertEquals("2.6666666666666665",math?.divide("8","3"))
     }
 
 
